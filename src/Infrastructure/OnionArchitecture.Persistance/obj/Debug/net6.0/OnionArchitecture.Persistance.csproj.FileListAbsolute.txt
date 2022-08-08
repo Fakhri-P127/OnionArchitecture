@@ -1,0 +1,5 @@
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\OnionArchitecture.Persistance.csproj.AssemblyReference.cache
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\OnionArchitecture.Persistance.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\OnionArchitecture.Persistance.AssemblyInfoInputs.cache
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\OnionArchitecture.Persistance.AssemblyInfo.cs
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\OnionArchitecture.Persistance.csproj.CoreCompileInputs.cache

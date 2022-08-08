@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "W9XEeZFo08EVH1vLy+tSEM0EDdMP+yTXb98cCxy9fUM2pjXOuhm5G3meCP5RM1E9xo6SUnDVs57K2vHsjYuQ/g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\efend\\source\\repos\\Backend\\OnionArchitecture\\src\\WebAPI\\OnionArchitecture.WebApi\\OnionArchitecture.WebApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\efend\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\efend\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\efend\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\efend\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\efend\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\efend\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

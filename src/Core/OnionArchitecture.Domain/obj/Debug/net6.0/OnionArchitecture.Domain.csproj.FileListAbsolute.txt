@@ -1,0 +1,12 @@
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Domain\obj\Debug\net6.0\OnionArchitecture.Domain.csproj.AssemblyReference.cache
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Domain\obj\Debug\net6.0\OnionArchitecture.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Domain\obj\Debug\net6.0\OnionArchitecture.Domain.AssemblyInfoInputs.cache
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Domain\obj\Debug\net6.0\OnionArchitecture.Domain.AssemblyInfo.cs
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Domain\obj\Debug\net6.0\OnionArchitecture.Domain.csproj.CoreCompileInputs.cache
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Domain\bin\Debug\net6.0\OnionArchitecture.Domain.deps.json
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Domain\bin\Debug\net6.0\OnionArchitecture.Domain.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Domain\bin\Debug\net6.0\OnionArchitecture.Domain.pdb
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Domain\obj\Debug\net6.0\OnionArchitecture.Domain.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Domain\obj\Debug\net6.0\refint\OnionArchitecture.Domain.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Domain\obj\Debug\net6.0\OnionArchitecture.Domain.pdb
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Domain\obj\Debug\net6.0\ref\OnionArchitecture.Domain.dll
