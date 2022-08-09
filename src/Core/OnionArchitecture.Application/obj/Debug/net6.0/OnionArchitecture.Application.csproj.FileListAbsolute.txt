@@ -13,3 +13,5 @@ C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture
 C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Application\obj\Debug\net6.0\refint\OnionArchitecture.Application.dll
 C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Application\obj\Debug\net6.0\OnionArchitecture.Application.pdb
 C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Application\obj\Debug\net6.0\ref\OnionArchitecture.Application.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Application\bin\Debug\net6.0\OnionArchitecture.Application.runtimeconfig.json
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Core\OnionArchitecture.Application\obj\Debug\net6.0\OnionArchitecture.Application.genruntimeconfig.cache

@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OnionArchitecture.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,12 @@ using System.Threading.Tasks;
 
 namespace OnionArchitecture.Persistance.Context
 {
-    internal class ProniaDbContext:DbContext
+    public class ProniaDbContext:DbContext
     {
         public ProniaDbContext(DbContextOptions<ProniaDbContext> opt):base(opt)
         {
             
         }
+        public DbSet<Category>  Categories{ get; set; }
     }
 }

@@ -3,3 +3,17 @@ C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionAr
 C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\OnionArchitecture.Persistance.AssemblyInfoInputs.cache
 C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\OnionArchitecture.Persistance.AssemblyInfo.cs
 C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\OnionArchitecture.Persistance.csproj.CoreCompileInputs.cache
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\bin\Debug\net6.0\OnionArchitecture.Persistance.deps.json
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\bin\Debug\net6.0\OnionArchitecture.Persistance.runtimeconfig.json
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\bin\Debug\net6.0\OnionArchitecture.Persistance.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\bin\Debug\net6.0\OnionArchitecture.Persistance.pdb
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\bin\Debug\net6.0\OnionArchitecture.Application.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\bin\Debug\net6.0\OnionArchitecture.Domain.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\bin\Debug\net6.0\OnionArchitecture.Application.pdb
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\bin\Debug\net6.0\OnionArchitecture.Domain.pdb
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\OnionArchitecture.Persistance.csproj.CopyComplete
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\OnionArchitecture.Persistance.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\refint\OnionArchitecture.Persistance.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\OnionArchitecture.Persistance.pdb
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\OnionArchitecture.Persistance.genruntimeconfig.cache
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\Infrastructure\OnionArchitecture.Persistance\obj\Debug\net6.0\ref\OnionArchitecture.Persistance.dll
