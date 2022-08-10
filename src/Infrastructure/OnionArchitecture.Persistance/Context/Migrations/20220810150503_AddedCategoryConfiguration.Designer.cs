@@ -9,11 +9,11 @@ using OnionArchitecture.Persistance.Context;
 
 #nullable disable
 
-namespace OnionArchitecture.Persistance.Migrations
+namespace OnionArchitecture.Persistance.Context.Migrations
 {
     [DbContext(typeof(ProniaDbContext))]
-    [Migration("20220809063747_Test")]
-    partial class Test
+    [Migration("20220810150503_AddedCategoryConfiguration")]
+    partial class AddedCategoryConfiguration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -39,9 +39,14 @@ namespace OnionArchitecture.Persistance.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(15)
+                        .HasColumnType("nvarchar(15)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique()
+                        .HasFilter("[Name] IS NOT NULL");
 
                     b.ToTable("Categories");
                 });

@@ -65,3 +65,8 @@ C:\Users\efend\source\repos\Backend\OnionArchitecture\src\WebAPI\OnionArchitectu
 C:\Users\efend\source\repos\Backend\OnionArchitecture\src\WebAPI\OnionArchitecture.WebApi\obj\Debug\net6.0\OnionArchitecture.WebApi.pdb
 C:\Users\efend\source\repos\Backend\OnionArchitecture\src\WebAPI\OnionArchitecture.WebApi\obj\Debug\net6.0\OnionArchitecture.WebApi.genruntimeconfig.cache
 C:\Users\efend\source\repos\Backend\OnionArchitecture\src\WebAPI\OnionArchitecture.WebApi\obj\Debug\net6.0\ref\OnionArchitecture.WebApi.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\WebAPI\OnionArchitecture.WebApi\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\WebAPI\OnionArchitecture.WebApi\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\WebAPI\OnionArchitecture.WebApi\bin\Debug\net6.0\FluentValidation.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\WebAPI\OnionArchitecture.WebApi\bin\Debug\net6.0\FluentValidation.AspNetCore.dll
+C:\Users\efend\source\repos\Backend\OnionArchitecture\src\WebAPI\OnionArchitecture.WebApi\bin\Debug\net6.0\FluentValidation.DependencyInjectionExtensions.dll

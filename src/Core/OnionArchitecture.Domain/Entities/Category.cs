@@ -9,6 +9,7 @@ namespace OnionArchitecture.Domain.Entities
     public class Category : Base.BaseEntity
     {
         public string Name { get; set; }
+        public List<PlantCategory> PlantCategories { get; set; }
 
     }
 }

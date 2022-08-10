@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace OnionArchitecture.Persistance.Migrations
+namespace OnionArchitecture.Persistance.Context.Migrations
 {
-    public partial class Test : Migration
+    public partial class CreatedCategoriesTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
