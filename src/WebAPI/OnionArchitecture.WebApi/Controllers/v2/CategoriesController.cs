@@ -10,7 +10,7 @@ namespace OnionArchitecture.WebApi.Controllers.v2
 {
     [ApiVersion("2.0")]
     [ApiController]
-    [Route("api/v{version:apiVersion}/[controller]")]
+    [Route("api/[controller]")]
     public class CategoriesController : ControllerBase
     {
         private readonly IUnitOfWork _unit;
