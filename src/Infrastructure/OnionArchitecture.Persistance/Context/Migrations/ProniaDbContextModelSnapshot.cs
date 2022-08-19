@@ -65,6 +65,9 @@ namespace OnionArchitecture.Persistance.Context.Migrations
                         .HasMaxLength(300)
                         .HasColumnType("nvarchar(300)");
 
+                    b.Property<DateTime?>("EnsureDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime>("ModifiedAt")
                         .HasColumnType("datetime2");
 

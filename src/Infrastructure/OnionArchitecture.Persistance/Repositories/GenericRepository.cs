@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OnionArchitecture.Application.Interfaces;
 using OnionArchitecture.Application.Interfaces.Repositories;
 using OnionArchitecture.Domain.Entities.Base;
 using OnionArchitecture.Persistance.Context;
@@ -11,50 +12,51 @@ using System.Threading.Tasks;
 
 namespace OnionArchitecture.Persistance.Repositories
 {
-    public class GenericRepository<T> : IPlantCategory<T> where T : BaseEntity
+    public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntity
     {
         private readonly ProniaDbContext _context;
-        //private readonly DbSet<T> _context.Set<T>();
+        private readonly DbSet<T> _dbSet;
 
         public GenericRepository(ProniaDbContext context)
         {
             _context = context;
-            //_context.Set<T>() = dbSet;
+            _dbSet = _context.Set<T>();
         }
         public async Task<List<T>> GetAllAsync(Expression<Func<T,bool>> expression,params string[] includes)
         {
-            IQueryable<T> query = expression is not null ? _context.Set<T>()
-                .Where(expression) : _context.Set<T>().AsQueryable();
+            IQueryable<T> query = expression is not null ? _dbSet
+                .Where(expression) : _dbSet.AsQueryable();
 
             if (includes.Length != 0)
             {
                 foreach (string include in includes)
                 {
-                    query.Include(include);
+                    query = query.Include(include);
                 }
             }
             return await query.ToListAsync();
         }
 
-        public async Task<T> GetByIdAsync(int id, params string[] includes)
+        public async Task<T> GetByIdAsync(int id, Expression<Func<T, bool>> expression, params string[] includes)
         {
-
-           IQueryable<T> queryValue =  _context.Set<T>().AsSingleQuery();
+         
+            IQueryable<T> queryValue = expression is not null ? _dbSet.Where(expression) 
+                : _dbSet.AsQueryable();
             if (includes.Length != 0)
             {
                 foreach (string include in includes)
                 {
-                    queryValue.Include(include);
+                    queryValue = queryValue.Include(include);
                 }
             }
             T value = await queryValue.FirstOrDefaultAsync(x => x.Id == id);
-            if (value is null) return null;
+
             return value;
         }
         public async Task AddAsync(T entity)
         {
-            //if (_context.Set<T>().Any(x => x == entity)) return;
-            await _context.Set<T>().AddAsync(entity);
+            //if (_dbSet.Any(x => x == entity)) return;
+            await _dbSet.AddAsync(entity);
             await _context.SaveChangesAsync();
         }
         public void Update(T entity,bool state)
@@ -65,20 +67,16 @@ namespace OnionArchitecture.Persistance.Repositories
             }
             else
             {
-                _context.Set<T>().Attach(entity);
+                _dbSet.Attach(entity);
             }
             
         }
         public async Task DeleteAsync(T entity)
         {
-            _context.Set<T>().Remove(entity);
+            _dbSet.Remove(entity);
             await _context.SaveChangesAsync();
         }
 
-        public async Task SaveChangesAsync()
-        {
-            await _context.SaveChangesAsync();
-        }
 
       
     }

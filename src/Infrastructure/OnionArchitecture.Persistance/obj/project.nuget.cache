@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "iLOIuzHfpjzPvk3sLLjwBOKCjvNJ0Kk3Xxg7ylVSJYxfzD5AvY86up0T8QaR71FU69yYdC5OE3Y+NJ+dWisWMQ==",
+  "dgSpecHash": "vJRFFI6fVKMdeub4sM8KHJlWQ8ro0AZCjaigMTeiJ83plIaBZpZQncMojlNtCbzPlbvfu9JZgR3O6FicAZRYqw==",
   "success": true,
   "projectFilePath": "C:\\Users\\efend\\source\\repos\\Backend\\OnionArchitecture\\src\\Infrastructure\\OnionArchitecture.Persistance\\OnionArchitecture.Persistance.csproj",
   "expectedPackageFiles": [

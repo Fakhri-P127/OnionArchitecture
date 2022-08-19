@@ -19,6 +19,7 @@ namespace OnionArchitecture.Application.Mapping
             CreateMap<Plant, PlantItemDto>();
             CreateMap<PlantPostDto, Plant>();
             //CreateMap<Plant, PlantCategoryInPlantPostDto>();
+            CreateMap<PlantCategory, PlantCategoryInPlantDto>().ReverseMap();
         }
     }
 }

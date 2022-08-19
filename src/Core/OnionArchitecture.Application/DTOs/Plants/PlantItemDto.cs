@@ -14,6 +14,8 @@ namespace OnionArchitecture.Application.DTOs.Plants
         public string Description { get; set; }
         public decimal Price { get; set; }
         public string SKU { get; set; }
+        public DateTime? EnsureDate { get; set; }
+
         //public List<PlantCategoryInPlantPostDto> PlantCategories { get; set; }
 
     }

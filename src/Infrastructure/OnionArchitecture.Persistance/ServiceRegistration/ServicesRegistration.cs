@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using OnionArchitecture.Application.Interfaces;
 using OnionArchitecture.Application.Interfaces.Repositories;
 using OnionArchitecture.Persistance.Context;
 using OnionArchitecture.Persistance.Repositories;
@@ -20,9 +21,8 @@ namespace OnionArchitecture.Persistance.ServiceRegistration
             {
                 opt.UseSqlServer(configuration.GetConnectionString("default"));
             });
-            services.AddTransient<ICategoryRepository, CategoryRepository>();
-            services.AddTransient<IPlantRepository, PlantRepository>();
-
+            services.AddTransient<IUnitOfWork,UnitOfWork>();
+            
         }
     }
 }

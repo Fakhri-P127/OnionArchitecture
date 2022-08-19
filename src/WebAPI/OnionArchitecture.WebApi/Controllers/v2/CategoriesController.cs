@@ -2,22 +2,23 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnionArchitecture.Application.DTOs.Categories;
-using OnionArchitecture.Application.Interfaces.Repositories;
+using OnionArchitecture.Application.Filters.Category;
+using OnionArchitecture.Application.Interfaces;
 using OnionArchitecture.Domain.Entities;
 
-
-namespace OnionArchitecture.WebApi.Controllers
+namespace OnionArchitecture.WebApi.Controllers.v2
 {
-    [Route("api/[controller]")]
+    [ApiVersion("2.0")]
     [ApiController]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class CategoriesController : ControllerBase
     {
-        private readonly ICategoryRepository _repository;
+        private readonly IUnitOfWork _unit;
         private readonly IMapper _mapper;
 
-        public CategoriesController(ICategoryRepository repository, IMapper mapper)
+        public CategoriesController(IUnitOfWork unit, IMapper mapper)
         {
-            _repository = repository;
+            _unit = unit;
             _mapper = mapper;
         }
 
@@ -30,7 +31,7 @@ namespace OnionArchitecture.WebApi.Controllers
                 description = "Inputted id is invalid, you can't enter 0."
             });
 
-            Category category = await _repository.GetByIdAsync(id,null);
+            Category category = await _unit.CategoryRepository.GetByIdAsync(id, null);
             if (category is null) return NotFound();
 
             CategoryItemDto dto = _mapper.Map<CategoryItemDto>(category);
@@ -40,7 +41,7 @@ namespace OnionArchitecture.WebApi.Controllers
         public async Task<IActionResult> GetAll()
         {
 
-            List<Category> categories = await _repository.GetAllAsync(null);
+            List<Category> categories = await _unit.CategoryRepository.GetAllAsync(null);
 
             List<CategoryItemDto> dtos = _mapper.Map<List<CategoryItemDto>>(categories);
 
@@ -48,13 +49,14 @@ namespace OnionArchitecture.WebApi.Controllers
         }
 
         [HttpPost]
+        [EnsureNameActionFilter]
         public async Task<IActionResult> Create(CategoryPostDto dto)
         {
             Category category = _mapper.Map<Category>(dto);
             category.CreatedAt = DateTime.Now;
             category.ModifiedAt = DateTime.Now;
 
-            await _repository.AddAsync(category);
+            await _unit.CategoryRepository.AddAsync(category);
 
             return StatusCode(StatusCodes.Status201Created, new
             {
@@ -65,20 +67,20 @@ namespace OnionArchitecture.WebApi.Controllers
         }
 
         [HttpPut("{id}")]
-        public async Task<IActionResult> Update(int id,CategoryPostDto dto)
+        public async Task<IActionResult> Update(int id, CategoryPostDto dto)
         {
-            Category existed = await _repository.GetByIdAsync(id, null);
+            Category existed = await _unit.CategoryRepository.GetByIdAsync(id, null);
             if (existed is null) return NotFound();
-            _repository.Update(existed);
+            _unit.CategoryRepository.Update(existed);
             existed.Name = dto.Name;
             existed.ModifiedAt = DateTime.Now;
-            await _repository.SaveChangesAsync();
+            await _unit.SaveChangesAsync();
             return Ok(new
             {
-                category=dto,
-                modified=DateTime.Now
+                category = dto,
+                modified = DateTime.Now
             });
-        } 
+        }
 
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete(int id)
@@ -89,10 +91,10 @@ namespace OnionArchitecture.WebApi.Controllers
                 description = "Invalid input, please input something other than zero"
             });
 
-            Category existed = await _repository.GetByIdAsync(id, null);
+            Category existed = await _unit.CategoryRepository.GetByIdAsync(id, null);
             if (existed is null) return NotFound();
-                
-            await _repository.DeleteAsync(existed);
+
+            await _unit.CategoryRepository.DeleteAsync(existed);
             return Ok(id);
         }
     }

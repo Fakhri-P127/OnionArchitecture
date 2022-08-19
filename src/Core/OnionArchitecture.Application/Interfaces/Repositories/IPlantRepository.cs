@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OnionArchitecture.Application.Interfaces.Repositories
 {
-    public interface IPlantRepository:IPlantCategory<Plant>
+    public interface IPlantRepository: IGenericRepository<Plant>
     {
     }
 }

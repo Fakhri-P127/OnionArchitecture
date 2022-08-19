@@ -7,17 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B96046F7-1AD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{A687C959-EA34-4AAE-AC43-4465681303CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Domain", "src\Core\OnionArchitecture.Domain\OnionArchitecture.Domain.csproj", "{29E017F0-E7AB-4042-A8B4-5F872BECD718}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture.Domain", "src\Core\OnionArchitecture.Domain\OnionArchitecture.Domain.csproj", "{29E017F0-E7AB-4042-A8B4-5F872BECD718}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Application", "src\Core\OnionArchitecture.Application\OnionArchitecture.Application.csproj", "{80E6D662-B2D5-44E4-BBDC-816AE91AA6B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture.Application", "src\Core\OnionArchitecture.Application\OnionArchitecture.Application.csproj", "{80E6D662-B2D5-44E4-BBDC-816AE91AA6B8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{AE8DF912-BBCC-407B-AC57-0C78A2CD4A4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.Persistance", "src\Infrastructure\OnionArchitecture.Persistance\OnionArchitecture.Persistance.csproj", "{9A76E65E-B8D8-42F6-AAD9-172A36A6D49E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture.Persistance", "src\Infrastructure\OnionArchitecture.Persistance\OnionArchitecture.Persistance.csproj", "{9A76E65E-B8D8-42F6-AAD9-172A36A6D49E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPI", "WebAPI", "{B4E88046-224D-45EE-9C68-3D9CA03313F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture.WebApi", "src\WebAPI\OnionArchitecture.WebApi\OnionArchitecture.WebApi.csproj", "{D4AD016F-24C1-4D69-9D1B-8DB2311D42B9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture.WebApi", "src\WebAPI\OnionArchitecture.WebApi\OnionArchitecture.WebApi.csproj", "{D4AD016F-24C1-4D69-9D1B-8DB2311D42B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -13,10 +13,15 @@ namespace OnionArchitecture.Application.DTOs.Plants
         public string Description { get; set; }
         public decimal Price { get; set; }
         public string SKU { get; set; }
-        //public List<int> CategoryId { get; set; }
+        public DateTime? EnsureDate { get; set; }
 
-        //public List<Category> PlantCategories { get; set; }
+        public List<PlantCategoryInPlantDto> PlantCategories { get; set; }
     }
+    public  class PlantCategoryInPlantDto
+    {
+        public int CategoryId { get; set; }
 
+
+    }
   
 }

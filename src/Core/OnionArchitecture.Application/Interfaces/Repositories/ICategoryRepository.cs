@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace OnionArchitecture.Application.Interfaces.Repositories
 {
-    public interface ICategoryRepository:IPlantCategory<Category>
+    public interface ICategoryRepository: IGenericRepository<Category>
     {
         
     }

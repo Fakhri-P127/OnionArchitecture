@@ -14,6 +14,8 @@ namespace OnionArchitecture.Domain.Entities
         public string SKU { get; set; }
         public decimal Price { get; set; }
         public List<PlantCategory> PlantCategories { get; set; }
+        public DateTime? EnsureDate { get; set; }
+
 
     }
 }

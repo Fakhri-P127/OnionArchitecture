@@ -8,13 +8,12 @@ using System.Threading.Tasks;
 
 namespace OnionArchitecture.Application.Interfaces.Repositories
 {
-    public interface IPlantCategory<T> where T:BaseEntity
+    public interface IGenericRepository<T> where T:BaseEntity
     {
         Task<List<T>> GetAllAsync(Expression<Func<T,bool>> expression,params string[] includes);
-        Task<T> GetByIdAsync(int id, params string[] includes);
+        Task<T> GetByIdAsync(int id,Expression<Func<T,bool>> expression, params string[] includes);
         Task AddAsync(T entity);
         void Update(T entity,bool state=true);
         Task DeleteAsync(T entity);
-        Task SaveChangesAsync();
     }
 }

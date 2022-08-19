@@ -12,9 +12,10 @@ namespace OnionArchitecture.Persistance.Repositories
 {
     public class PlantRepository : GenericRepository<Plant>, IPlantRepository
     {
-
         public PlantRepository(ProniaDbContext context):base(context)
         {
         }
+
+    
     }
 }
