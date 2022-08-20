@@ -15,14 +15,17 @@ namespace OnionArchitecture.WebApi.Controllers.v1
     {
         private readonly IUnitOfWork _unit;
         private readonly IMapper _mapper;
+        private readonly IHttpClientFactory _clientFactory;
 
-        public CategoriesController(IUnitOfWork unit, IMapper mapper)
+        public CategoriesController(IUnitOfWork unit, IMapper mapper,IHttpClientFactory clientFactory)
         {
             _unit = unit;
             _mapper = mapper;
+            _clientFactory = clientFactory;
         }
 
         [HttpGet("{id}")]
+        [ResponseCache(Duration =5)]
         public async Task<IActionResult> Get(int id)
         {
             if (id == 0) return BadRequest(new
@@ -30,7 +33,10 @@ namespace OnionArchitecture.WebApi.Controllers.v1
                 code = "Id",
                 description = "Inputted id is invalid, you can't enter 0."
             });
-
+            HttpClient client = _clientFactory.CreateClient("ghibliApi");
+            var ghibli = await client.GetStringAsync("/films/58611129-2dbc-4a81-a72f-77ddfc1b1b49");
+            
+           
             Category category = await _unit.CategoryRepository.GetByIdAsync(id, null);
             if (category is null) return NotFound();
 

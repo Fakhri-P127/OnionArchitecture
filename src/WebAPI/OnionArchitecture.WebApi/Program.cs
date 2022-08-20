@@ -1,18 +1,26 @@
 
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
-using OnionArchitecture.Application.Filters;
-using OnionArchitecture.Application.Interfaces.Repositories;
-
 using OnionArchitecture.Application.ServiceRegistration;
-using OnionArchitecture.Domain.Entities;
-using OnionArchitecture.Persistance.Context;
-using OnionArchitecture.Persistance.Repositories;
 using OnionArchitecture.Persistance.ServiceRegistration;
+using OnionArchitecture.WebApi.BackgroundServices;
+using OnionArchitecture.WebApi.Extensions;
+using Serilog;
+using Serilog.Events;
+
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .MinimumLevel.Override("Microsoft",LogEventLevel.Warning)
+    .Enrich.FromLogContext()
+    .WriteTo.File(@"C:\Users\efend\Desktop\sa.txt")
+    .CreateLogger();
+
 
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 // Add services to the container.
 builder.Services.AddControllers(/*opt =>opt.Filters.Add<VersionDiscontinueResourceFilter>()*/)
@@ -36,9 +44,19 @@ builder.Services.AddApiVersioning(opt =>
     opt.ApiVersionReader = new HeaderApiVersionReader("X-API-VERSION");
 });
 builder.Services.AddVersionedApiExplorer(opt=>opt.GroupNameFormat="'v'VVV");
+builder.Services.AddHealthChecks();
+builder.Services.AddHostedService<DateTimeLogWriter>();
+builder.Services.AddHttpClient("ghibliApi", config =>
+{
+    config.BaseAddress = new Uri("https://ghibliapi.herokuapp.com");
+    //config.DefaultRequestHeaders.Add("Authorization", "Bearer eqidoqsdjasjklfhq1i1e");
+});
+builder.Host.UseSerilog();
+//builder.Host.UseWindowsService();
+
 var app = builder.Build();
 
-app.UseHttpLogging();
+//app.UseHttpLogging();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -49,11 +67,25 @@ if (app.Environment.IsDevelopment())
         opt.SwaggerEndpoint("/swagger/v2/swagger.json", "WebApi v2");
     });
 }
-
 app.UseHttpsRedirection();
-
+app.UseCustomHealthCheck();
+app.UseResponseCaching();
 app.UseAuthorization();
 //app.UseApiVersioning();
 app.MapControllers();
 
-app.Run();
+try
+{
+    Log.Information("Starting up service");
+    app.Run();
+    return;
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex.Message, "There was a problem");
+    return;
+}
+finally
+{
+    Log.CloseAndFlush();
+}
