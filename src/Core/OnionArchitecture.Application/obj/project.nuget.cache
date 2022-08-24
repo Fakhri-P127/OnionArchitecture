@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "sVn2ni+yAR+ZLn11U2g9hn2Qywc4pJSR4vw2ULGuWAlPX8Q7dYUgD5OqTu6fcUfoWcX+04NAFL6meD5kTA/c0Q==",
+  "dgSpecHash": "BnnZTOUUYEUyNuv0H0Vwn3hRNka5WgPU4Q1X1RzZ0UKwWb1k4YShR52urb9R+AhD+l6+mCUFcoDF6UVo/du52Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\efend\\source\\repos\\Backend\\OnionArchitecture\\src\\Core\\OnionArchitecture.Application\\OnionArchitecture.Application.csproj",
   "expectedPackageFiles": [
@@ -10,6 +10,9 @@
     "C:\\Users\\efend\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.2.1\\fluentvalidation.aspnetcore.11.2.1.nupkg.sha512",
     "C:\\Users\\efend\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.2.0\\fluentvalidation.dependencyinjectionextensions.11.2.0.nupkg.sha512",
     "C:\\Users\\efend\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\efend\\.nuget\\packages\\mediatr\\10.0.1\\mediatr.10.0.1.nupkg.sha512",
+    "C:\\Users\\efend\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\efend\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\10.0.1\\mediatr.extensions.microsoft.dependencyinjection.10.0.1.nupkg.sha512",
     "C:\\Users\\efend\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\efend\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.7\\microsoft.entityframeworkcore.6.0.7.nupkg.sha512",
     "C:\\Users\\efend\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.7\\microsoft.entityframeworkcore.abstractions.6.0.7.nupkg.sha512",

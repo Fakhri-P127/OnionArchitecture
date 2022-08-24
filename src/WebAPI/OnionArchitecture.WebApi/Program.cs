@@ -1,21 +1,24 @@
-
+using MediatR;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Versioning;
 using Microsoft.OpenApi.Models;
+using OnionArchitecture.Application.PiplineBehaviours;
 using OnionArchitecture.Application.ServiceRegistration;
+using OnionArchitecture.Persistance.Context;
 using OnionArchitecture.Persistance.ServiceRegistration;
-using OnionArchitecture.WebApi.BackgroundServices;
+using OnionArchitecture.WebApi;
+//using OnionArchitecture.WebApi.BackgroundServices;
 using OnionArchitecture.WebApi.Extensions;
 using Serilog;
 using Serilog.Events;
 
-Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Debug()
-    .MinimumLevel.Override("Microsoft",LogEventLevel.Warning)
-    .Enrich.FromLogContext()
-    .WriteTo.File(@"C:\Users\efend\Desktop\sa.txt")
-    .CreateLogger();
+//Log.Logger = new LoggerConfiguration()
+//    .MinimumLevel.Debug()
+//    .MinimumLevel.Override("Microsoft",LogEventLevel.Warning)
+//    .Enrich.FromLogContext()
+//    .WriteTo.File(@"C:\Users\efend\Desktop\sa.txt")
+//    .CreateLogger();
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -44,14 +47,18 @@ builder.Services.AddApiVersioning(opt =>
     opt.ApiVersionReader = new HeaderApiVersionReader("X-API-VERSION");
 });
 builder.Services.AddVersionedApiExplorer(opt=>opt.GroupNameFormat="'v'VVV");
-builder.Services.AddHealthChecks();
-builder.Services.AddHostedService<DateTimeLogWriter>();
+//builder.Services.AddTransient<IPipelineBehavior<,>,typeof(ValidationBehaviour)>;
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationPiplineBehaviour<,>));
+//builder.Services.AddHealthChecks();
+//builder.Services.AddHostedService<DateTimeLogWriter>();
 builder.Services.AddHttpClient("ghibliApi", config =>
 {
     config.BaseAddress = new Uri("https://ghibliapi.herokuapp.com");
     //config.DefaultRequestHeaders.Add("Authorization", "Bearer eqidoqsdjasjklfhq1i1e");
 });
-builder.Host.UseSerilog();
+
+
+//builder.Host.UseSerilog();
 //builder.Host.UseWindowsService();
 
 var app = builder.Build();
@@ -67,8 +74,10 @@ if (app.Environment.IsDevelopment())
         opt.SwaggerEndpoint("/swagger/v2/swagger.json", "WebApi v2");
     });
 }
+app.UseMiddleware(typeof(ErrorHandlingMiddleware));
+//await app.Seed();
 app.UseHttpsRedirection();
-app.UseCustomHealthCheck();
+//app.UseCustomHealthCheck();
 app.UseResponseCaching();
 app.UseAuthorization();
 //app.UseApiVersioning();
